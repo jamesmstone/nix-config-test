@@ -1,7 +1,7 @@
 { pkgs, ... }:
 
 {
-  # TODO: these are dummy file systems, get the proper one
+  # TODO: these are dummy file systems, get the proper one.
   fileSystems."/boot" =
     {
       device = "/dev/disk/by-uuid/7BB3-09C5";
