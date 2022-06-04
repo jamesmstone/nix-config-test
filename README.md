@@ -1,8 +1,8 @@
 nix-config!
 ===========
 
-[![CI Home](https://github.com/gvolpe/nix-config/workflows/Home/badge.svg)](https://github.com/gvolpe/nix-config/actions)
-[![CI System](https://github.com/gvolpe/nix-config/workflows/NixOS/badge.svg)](https://github.com/gvolpe/nix-config/actions)
+[![CI Home](https://github.com/jamesmstone/nix-config/workflows/Home/badge.svg)](https://github.com/jamesmstone/nix-config/actions)
+[![CI System](https://github.com/jamesmstone/nix-config/workflows/NixOS/badge.svg)](https://github.com/jamesmstone/nix-config/actions)
 
 My current — and always evolving — NixOS configuration files, home-manager, neovim, etc.
 
