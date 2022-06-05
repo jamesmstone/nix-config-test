@@ -107,7 +107,7 @@ in
       # otherwise authenticate with tailscale
       ${tailscale}/bin/tailscale up -authkey tskey-examplekeyhere
     '';
-  }
+  };
 
   # Enable Docker & VirtualBox support.
   virtualisation = {
