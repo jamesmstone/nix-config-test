@@ -32,7 +32,7 @@ post_home() {
 }
 
 build_ci_home() {
-  nix build .#homeConfigurations.james-edp.activationPackage
+  nix build --show-trace .#homeConfigurations.james-edp.activationPackage
 }
 
 build_ci_system() {
