@@ -5,4 +5,5 @@
   ./picom
   ./screenlocker
   ./udiskie
+  ./tailscale
 ]
