@@ -4,7 +4,7 @@
       "https://jamesmstonenixos.cachix.org"
     ];
     trusted-public-keys = [
-      "jamesmstonenixos-nixos.cachix.org-1:0MPlBIMwYmrNqoEaYTox15Ds2t1+3R+6Ycj0hZWMcL0="
+      "jamesmstonenixos.cachix.org-1:nTCrAMiq8GxDkSID7bV1V14g8qU4apCwUhmtlOc0Pks="
     ];
   };
 }
