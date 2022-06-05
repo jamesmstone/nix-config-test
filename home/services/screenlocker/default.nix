@@ -3,7 +3,7 @@
 {
   services.screen-locker = {
     enable = true;
-    inactiveInterval = 30;
+    inactiveInterval = 5;
     lockCmd = "${pkgs.multilockscreen}/bin/multilockscreen -l dim";
     xautolock.extraOptions = [
       "Xautolock.killer: systemctl suspend"
