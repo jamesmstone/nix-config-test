@@ -85,8 +85,8 @@ Here is an overview of the folders' structure:
 You can have a look at the available flake outputs before getting started.
 
 ```console
-$ nix flake show github:gvolpe/nix-config
-github:gvolpe/nix-config/60b91aea6461cfb8fb1efdc9fb88f8c5ba815810
+$ nix flake show github:jamesmstone/nix-config
+github:jamesmstone/nix-config/60b91aea6461cfb8fb1efdc9fb88f8c5ba815810
 ├───devShell
 │   └───x86_64-linux: development environment 'installation-shell'
 ├───homeConfigurations: unknown
@@ -100,7 +100,7 @@ github:gvolpe/nix-config/60b91aea6461cfb8fb1efdc9fb88f8c5ba815810
 The full home configuration is not yet fully automated but the NixOS configuration can be installed by running the following command.
 
 ```console
-$ nixos-rebuild switch --flake github:gvolpe/nix-config#tongfang-amd
+$ nixos-rebuild switch --flake github:jamesmstone/nix-config#tongfang-amd
 ```
 
 Beware that the `hardware-configuration.nix` file is the result of the hardware scan of the specific machine and might not be suitable for yours.
@@ -110,7 +110,7 @@ Beware that the `hardware-configuration.nix` file is the result of the hardware 
 A fresh install requires the creation of certain directories so this has not been automated yet (see `build` script file). However, if you omit those steps, the entire HM configuration can also be built as any other flake.
 
 ```console
-$ nix build github:gvolpe/nix-config#homeConfigurations.gvolpe-hdmi.activationPackage
+$ nix build github:jamesmstone/nix-config#homeConfigurations.jamesmstone-hdmi.activationPackage
 $ result/activate
 ```
 
@@ -119,7 +119,7 @@ $ result/activate
 On a fresh NixOS installation, run the following commands.
 
 ```console
-$ nix flake clone github:gvolpe/nix-config --dest /choose/a/path
+$ nix flake clone github:jamesmstone/nix-config --dest /choose/a/path
 $ nix run nixpkgs#git-crypt unlock
 $ ./build fresh-install # requires sudo
 ```
@@ -136,6 +136,6 @@ sudo result/bin/switch-to-configuration switch
 Or for Home Manager.
 
 ```console
-$ nix build .#homeConfigurations.gvolpe-hdmi.activationPackage
+$ nix build .#homeConfigurations.jamesmstone-hdmi.activationPackage
 $ result/activate
 ```

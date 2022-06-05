@@ -1,7 +1,7 @@
 { system, nixpkgs, nurpkgs, home-manager, tex2nix, ... }:
 
 let
-  username = "gvolpe";
+  username = "james";
   homeDirectory = "/home/${username}";
   configHome = "${homeDirectory}/.config";
 
@@ -44,6 +44,6 @@ let
   };
 in
 {
-  gvolpe-edp = mkHome edpConf;
-  gvolpe-hdmi = mkHome hdmiConf;
+  james-edp = mkHome edpConf;
+  james-hdmi = mkHome hdmiConf;
 }
