@@ -41,8 +41,11 @@ build_ci_system() {
 }
 
 build_iso_system() {
+  fresh_install
+  nix-shell -p nixos-generate --command '
     nixos-generate --list
     nixos-generate -f install-iso
+  '
 }
 
 fresh_install() {
