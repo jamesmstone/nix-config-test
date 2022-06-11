@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ environment, services, pkgs, ... }:
 
 {
   # make the tailscale command usable to users
