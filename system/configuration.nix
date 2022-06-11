@@ -145,6 +145,9 @@ in
   };
 
   services = {
+    # Tailscale
+    tailscale.enable = true;
+
     # Mount MTP devices
     gvfs.enable = true;
 
