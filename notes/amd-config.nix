@@ -3,7 +3,7 @@
 {
   boot = {
     initrd.kernelModules = [ "amdgpu" ];
-    kernelPackages = pkgs.linuxPackages_5_8;
+    kernelPackages = pkgs.linuxPackages_5_18;
   };
 
   networking = {
