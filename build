@@ -36,8 +36,8 @@ build_ci_home() {
 }
 
 build_ci_system() {
-  nix build .#nixosConfigurations.dell-xps.config.system.build.toplevel
-  nix build .#nixosConfigurations.tongfang-amd.config.system.build.toplevel
+  nix build --show-trace .#nixosConfigurations.dell-xps.config.system.build.toplevel
+  nix build --show-trace .#nixosConfigurations.tongfang-amd.config.system.build.toplevel
 }
 
 fresh_install() {
