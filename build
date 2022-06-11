@@ -43,7 +43,13 @@ build_ci_system() {
 build_iso_system() {
   nix --extra-experimental-features "nix-command flakes" shell github:nix-community/nixos-generators -c nixos-generate --help
   nix --extra-experimental-features "nix-command flakes" shell github:nix-community/nixos-generators -c nixos-generate --list
-  nix --extra-experimental-features "nix-command flakes" shell github:nix-community/nixos-generators -c nixos-generate -f install-iso  -c notes/amd-config.nix -I nixpkgs=channel:nixos-22.05
+  nix --extra-experimental-features "nix-command flakes" shell github:nix-community/nixos-generators \
+   -c nixos-generate \
+   -f install-iso \
+    -I nixpkgs=channel:nixos-22.05 \
+    --show-trace \
+    -c notes/amd-config.nix
+
 }
 
 fresh_install() {
