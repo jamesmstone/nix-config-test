@@ -193,6 +193,7 @@ in
 
   services = {
     flameshot.enable = true;
+    tailscale.enable = true;
   };
 
 }
