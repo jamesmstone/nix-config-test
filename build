@@ -41,15 +41,8 @@ build_ci_system() {
 }
 
 build_iso_system() {
-  nix-shell -p cachix nixos-generate --command '
-    cachix use jamesmstonenixos
-    ./switch system
-    ./build pre-home
-    ./switch home
-    ./build post-home
     nixos-generate --list
     nixos-generate -f install-iso
-  '
 }
 
 fresh_install() {
