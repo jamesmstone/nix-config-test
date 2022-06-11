@@ -40,6 +40,18 @@ build_ci_system() {
   nix build --show-trace .#nixosConfigurations.tongfang-amd.config.system.build.toplevel
 }
 
+build_iso_system() {
+  nix-shell -p cachix nixos-generate --command '
+    cachix use jamesmstonenixos
+    ./switch system
+    ./build pre-home
+    ./switch home
+    ./build post-home
+    nixos-generate --list
+    nixos-generate -f install-iso
+  '
+}
+
 fresh_install() {
   nix-shell -p cachix --command '
     cachix use jamesmstonenixos
@@ -57,10 +69,12 @@ case $1 in
     build_ci_system;;
   "fresh-install")
     fresh_install;;
+  "iso-system")
+    build_iso_system;;
   "pre-home")
     pre_home;;
   "post-home")
     post_home;;
   *)
-    echo "Invalid option. Expected 'ci-home', 'ci-system', 'pre_home', 'post_home' or 'fresh-install'";;
+    echo "Invalid option. Expected 'ci-home', 'ci-system', 'iso-system', 'pre_home', 'post_home' or 'fresh-install'";;
 esac

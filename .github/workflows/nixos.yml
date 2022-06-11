@@ -36,3 +36,5 @@ jobs:
 
       - name: "Build NixOS config ❄️"
         run: ./build ci-system
+      - name: "Build NixOS iso ❄️"
+        run: ./build iso-system
