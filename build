@@ -40,6 +40,20 @@ build_ci_system() {
   nix build --show-trace .#nixosConfigurations.tongfang-amd.config.system.build.toplevel
 }
 
+build_iso_system() {
+  nix --extra-experimental-features "nix-command flakes" shell github:nix-community/nixos-generators -c nixos-generate --help
+  nix --extra-experimental-features "nix-command flakes" shell github:nix-community/nixos-generators -c nixos-generate --list
+  nix --extra-experimental-features "nix-command flakes" shell github:nix-community/nixos-generators \
+   -c nixos-generate \
+   -f install-iso \
+    -I nixpkgs=channel:nixos-22.05 \
+    --show-trace \
+    -c notes/amd-config.nix \
+    -o build.iso
+  ls -alh build.iso
+
+}
+
 fresh_install() {
   nix-shell -p cachix --command '
     cachix use jamesmstonenixos
@@ -57,10 +71,12 @@ case $1 in
     build_ci_system;;
   "fresh-install")
     fresh_install;;
+  "iso-system")
+    build_iso_system;;
   "pre-home")
     pre_home;;
   "post-home")
     post_home;;
   *)
-    echo "Invalid option. Expected 'ci-home', 'ci-system', 'pre_home', 'post_home' or 'fresh-install'";;
+    echo "Invalid option. Expected 'ci-home', 'ci-system', 'iso-system', 'pre_home', 'post_home' or 'fresh-install'";;
 esac
