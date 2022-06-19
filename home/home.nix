@@ -7,53 +7,27 @@ let
   defaultPkgs = with pkgs; [
     any-nix-shell        # fish support for nix shell
     arandr               # simple GUI for xrandr
-    asciinema            # record the terminal
-    audacious            # simple music player
-    bitwarden-cli        # command-line client for the password manager
     bottom               # alternative to htop & ytop
     cachix               # nix caching
-    calibre              # e-book reader
-    cobang               # qr-code scanner
     dconf2nix            # dconf (gnome) files to nix converter
     dmenu                # application launcher
     docker-compose       # docker manager
     dive                 # explore docker layers
-    drawio               # diagram design
-    duf                  # disk usage/free utility
-    exa                  # a better `ls`
-    fd                   # "find" for files
-    gimp                 # gnu image manipulation program
-    glow                 # terminal markdown viewer
-    gnomecast            # chromecast local files
-    hyperfine            # command-line benchmarking tool
     insomnia             # rest client with graphql support
     jitsi-meet-electron  # open source video calls and chat
     jmtpfs               # mount mtp devices
     killall              # kill processes by name
-    libreoffice          # office suite
     libnotify            # notify-send command
     multilockscreen      # fast lockscreen based on i3lock
-    ncdu                 # disk space info (a better du)
-    neofetch             # command-line system information
-    ngrok-2              # secure tunneling to localhost
-    nheko                # matrix messaging client
     nix-index            # locate packages containing certain nixpkgs
-    nyancat              # the famous rainbow cat!
-    md-toc               # generate ToC in markdown files
     pavucontrol          # pulseaudio volume control
     paprefs              # pulseaudio preferences
     pasystray            # pulseaudio systray
     pgcli                # modern postgres client
-    playerctl            # music player controller
     prettyping           # a nicer ping
     pulsemixer           # pulseaudio mixer
-    ranger               # terminal file explorer
     ripgrep              # fast grep
     rnix-lsp             # nix lsp server
-    signal-desktop       # signal messaging client
-    simple-scan          # scanner gui
-    simplescreenrecorder # screen recorder gui
-    skypeforlinux        # messaging client
     slack                # messaging client
     tdesktop             # telegram messaging client
     tex2nix              # texlive expressions for documents
@@ -61,7 +35,6 @@ let
     tree                 # display files in a tree view
     vlc                  # media player
     xsel                 # clipboard support (also for neovim)
-    yad                  # yet another dialog - fork of zenity
 
     # work stuff
     work-browser
