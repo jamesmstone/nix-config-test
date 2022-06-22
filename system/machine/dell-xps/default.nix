@@ -8,13 +8,14 @@
 
   # Use the GRUB 2 boot loader.
   boot = {
-    kernelPackages = pkgs.linuxPackages_latest;
+    kernelPackages = pkgs.linuxPackages_5_17;
     loader = {
-      grub = {
-        enable  = true;
-        device = "/dev/nvme0n1"; # or "nodev" for efi only
-        version = 2;
-      };
+      # commented out below: in order to build iso
+      # grub = {
+      #   enable  = true;
+      #   device = "/dev/nvme0n1"; # or "nodev" for efi only
+      #   version = 2;
+      # };
     };
   };
 
