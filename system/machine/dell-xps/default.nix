@@ -10,7 +10,7 @@
   boot = {
     kernelPackages = pkgs.linuxPackages_5_17;
     loader = {
-      # commented out below: inorder to build iso
+      # commented out below: in order to build iso
       # grub = {
       #   enable  = true;
       #   device = "/dev/nvme0n1"; # or "nodev" for efi only
